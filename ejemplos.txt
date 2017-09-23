@@ -1,0 +1,41 @@
+#Ejemplo del uso de expresiones regulares con egrep
+#Realizado por Leonel Pech May
+
+#Para referencia consultar http://www.rexegg.com/regex-quickstart.html
+
+#Busca todas las coincidencias que CONTENGAN "David"
+egrep "David" Music_Guide.txt
+
+#Busca todas las concidencias que INICIEN con la cadena "1."
+egrep "^1." Music_Guide.txt
+
+#Busca todas las concidencias que FINALICEN con la cadena "Armstrong"
+egrep "Armstrong$" Music_Guide.txt
+
+#Busca todas las coincidendias que CONTENGAN un número
+egrep "[0-9]" Music_Guide.txt
+
+#Busca todas las coincidendias que INICIEN un número
+egrep "^[0-9]" Music_Guide.txt 
+
+#Busca todas las palabras que inicien con "Th"
+egrep "^Th\w" Music_Guide.txt 
+
+#Busca todas las coincidencias que contengan "Billie" o "Alice"
+egrep "Billie|Alice" Music_Guide.txt
+
+#Busca valores que contengan un número cuya longitud sea 3 o más
+egrep '[0-9]{3,}' Music_Guide.txt 
+
+#Busca las coincidencias que inicien con el rango de palabras de la A a la C mayúsculas
+egrep '^[A-C]' Music_Guide.txt
+
+#Busca las coincidencias que contengan la letra mayúscula Z pero que no contengan la letra minúscula o
+egrep 'Z[^o]' Music_Guide.txt
+
+#Encuentra las coincidencias que cumplen las condiciones siguientes:
+#Todas las palabras que contengan B mayuscula
+#seguido de una vocal
+#que finalicen con ie 
+#los símbolos .* simbolizan que puede contener cualquier texto
+egrep 'B[aeiou].*ie' Music_Guide.txt 
